@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    Test page
+  </title>
+
+</head>
+<body>
+    <script>
+      window.exports = {};
+    </script>
+
+    <script src="quotes/QuotesDataSource.js"></script>
+
+    <script>
+      var qds = new window.QuotesDataSource();
+      qds.onData(function(s,e){
+        console.log("OnData",e);
+      });
+
+      qds.connect();
+    </script>
+</body>
+</html>
